@@ -1,10 +1,9 @@
 import mysql.connector
 
-
-def get_db_connection():
+def get_db():
     return mysql.connector.connect(
         host="localhost",
-        user="app_user",          # change if needed
-        password="app1234",       # change if needed
-        database="expense_split"  # change if needed
+        user="app_user",
+        password="app1234",
+        database="expense_split"
     )

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/login_screen.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
   runApp(const ExpenseSplitApp());
@@ -12,9 +12,13 @@ class ExpenseSplitApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Expense Split',
-      theme: ThemeData(primarySwatch: Colors.teal),
-      home: LoginScreen(),
+      title: 'ExpenseSplit',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        scaffoldBackgroundColor: Colors.white,
+        useMaterial3: true,
+      ),
+      home: const SplashScreen(), // 👈 Splash first
     );
   }
 }
